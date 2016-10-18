@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/vdanchenkov/power-log/issues"
   },
-  "homepage": "https://github.com/vdanchenkov/power-log#readme"
+  "homepage": "https://github.com/vdanchenkov/power-log#readme",
+  "dependencies": {
+    "power-assert-formatter": "^1.4.1"
+  }
 }
