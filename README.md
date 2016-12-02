@@ -60,3 +60,54 @@ var result = log(`There is ${data[key].split(' ').length} words`)
      "There is 2 words"                                
 
 ```
+
+## Alternatives
+
+If all you need is several values in a way they are easily identified, you
+may simply wrap them in an object.
+
+```js
+console.log({ data, key })
+```
+
+But there is cases where separate statement would not work. In following example functions might have side-effects so we can not call them several times and there is no room for separate statement.
+
+```js
+const f = (a, b) => otherFunc() + foo(a, bar(b))
+```
+
+To get results of bar and foo invocations you can use this library
+
+```js
+import log from 'power-log'
+const f = (a, b) => otherFunc() + log(foo(a, bar(b)))
+```
+
+or define simple pass-through logging function similar to the one provided by this module
+
+```js
+const log = arg => (console.log(arg), arg)
+const f = (a, b) => otherFunc() + log(foo(a, log(bar(b))))
+```
+
+or refactor to multi-line version
+
+```js
+import log from 'power-log'
+const f = (a, b) => {
+  const barResult = bar(b)
+  const fooResult = foo(a, barResult)
+  console.log({ barResult, fooResult })
+  return otherFunc() + fooResult
+}
+```
+
+if logged functions have no side-effects and it's ok to call them several times, you can
+use comma operator to inject console.log in the middle of statement.
+
+```js
+const f = (a, b) => otherFunc() + (
+  console.log({ barResult: bar(b), fooResult: foo(a, bar(b)) }),
+  foo(a, bar(b))
+)
+```
