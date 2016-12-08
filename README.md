@@ -62,14 +62,7 @@ But there is cases where separate statement would not work. In following example
 const f = (a, b) => otherFunc() + foo(a, bar(b))
 ```
 
-To get results of bar and foo invocations you can use this library
-
-```js
-import log from 'power-log'
-const f = (a, b) => otherFunc() + log(foo(a, bar(b)))
-```
-
-or define simple pass-through logging function similar to the one provided by this module
+To get results of bar and foo invocations you can define simple pass-through logging function similar to the one provided by this module
 
 ```js
 const log = arg => (console.log(arg), arg)
@@ -79,7 +72,6 @@ const f = (a, b) => otherFunc() + log(foo(a, log(bar(b))))
 or refactor to multi-line version
 
 ```js
-import log from 'power-log'
 const f = (a, b) => {
   const barResult = bar(b)
   const fooResult = foo(a, barResult)
