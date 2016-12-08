@@ -1,0 +1,28 @@
+{
+  "name": "babel-preset-power-log",
+  "version": "0.0.1",
+  "description": "Babel preset for power-log",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "mkdir lib && cp index.js lib && cp ../README.md lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:vdanchenkov/power-log.git"
+  },
+  "keywords": [
+    "power-assert",
+    "log"
+  ],
+  "author": "Vladimir Danchenkov <vladimir.danchenkov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vdanchenkov/power-log/issues"
+  },
+  "homepage": "https://github.com/vdanchenkov/power-log#readme",
+  "dependencies": {
+    "babel-plugin-espower": "^2.3.1"
+  }
+}

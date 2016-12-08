@@ -1,0 +1,28 @@
+{
+  "name": "power-log",
+  "version": "0.0.0-alpha-2",
+  "description": "Logs expressions with Power Assert tooling",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "mkdir lib && cp index.js lib && cp ../README.md lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:vdanchenkov/power-log.git"
+  },
+  "keywords": [
+    "power-assert",
+    "log"
+  ],
+  "author": "Vladimir Danchenkov <vladimir.danchenkov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vdanchenkov/power-log/issues"
+  },
+  "homepage": "https://github.com/vdanchenkov/power-log#readme",
+  "dependencies": {
+    "power-assert-formatter": "^1.4.1"
+  }
+}

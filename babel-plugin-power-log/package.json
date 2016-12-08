@@ -1,10 +1,13 @@
 {
-  "name": "power-log",
-  "version": "0.0.0-alpha-2",
-  "description": "Uncoditionally logs expressions with Power Assert",
-  "main": "index.js",
+  "name": "babel-plugin-power-log",
+  "version": "0.0.1",
+  "description": "Automatically requires power-log logger",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf lib",
+    "build": "babel src -d lib && cp ../README.md lib",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,9 @@
     "url": "https://github.com/vdanchenkov/power-log/issues"
   },
   "homepage": "https://github.com/vdanchenkov/power-log#readme",
-  "dependencies": {
-    "power-assert-formatter": "^1.4.1"
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "jest": "^17.0.3"
   }
 }
