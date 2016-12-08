@@ -1,11 +1,14 @@
 {
   "name": "power-log",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Logs expressions with Power Assert tooling",
   "main": "index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "clean": "rm -rf lib",
-    "build": "mkdir lib && cp index.js lib && cp ../README.md lib",
+    "build": "mkdir lib && cp index.js lib",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run clean && npm run build"
   },

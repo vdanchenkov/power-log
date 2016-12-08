@@ -17,6 +17,11 @@ instruments code with `babel-plugin-espower` to make it all work.
 npm install --save-dev babel-preset-power-log
 ```
 
+Put in .babelrc
+```
+{ "presets": "babel-preset-power-log" }
+```
+
 ## Usage
 
 Wrap any expression with pass-through `log` function to print it to console.  
