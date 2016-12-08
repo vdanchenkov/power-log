@@ -1,13 +1,14 @@
 {
   "name": "babel-plugin-power-log",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Automatically requires power-log logger",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",
     "build": "babel src -d lib && cp ../README.md lib",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",

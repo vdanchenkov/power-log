@@ -1,12 +1,13 @@
 {
   "name": "babel-preset-power-log",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Babel preset for power-log",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf lib",
     "build": "mkdir lib && cp index.js lib && cp ../README.md lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
